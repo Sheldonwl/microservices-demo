@@ -90,20 +90,12 @@ spec:
   hosts:
   - "frontend.onlineboutique.svc.cluster.local"
   http:
+  - match:
+        - uri:
+            prefix: /onlineboutique
   - route:
     - destination:
         host: frontend
         port:
           number: 80
----
-apiVersion: networking.istio.io/v1alpha3
-kind: DestinationRule
-metadata:
-  name: onlineboutique-dr
-spec:
-  host: onlineboutique
-  subsets:
-  - name: onlineboutique
-    labels: 
-      app: frontend
 # [END servicemesh_release_istio_manifests_microservices_demo]
