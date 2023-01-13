@@ -98,5 +98,5 @@ spec:
       - destination:
           host: frontend
           port:
-          number: 80
+            number: 80
 # [END servicemesh_release_istio_manifests_microservices_demo]
