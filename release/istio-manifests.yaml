@@ -24,7 +24,7 @@ metadata:
   name: frontend-gateway
 spec:
   selector:
-    istio: ingressgateway # use Istio default gateway implementation
+    istio: gateway # use Istio default gateway implementation
   servers:
   - port:
       number: 80
@@ -88,7 +88,7 @@ metadata:
   name: frontend
 spec:
   hosts:
-  - "frontend.default.svc.cluster.local"
+  - "frontend.onlineboutique.svc.cluster.local"
   http:
   - route:
     - destination:
