@@ -93,7 +93,7 @@ spec:
     - match:
         - uri:
             prefix: /onlineboutique
-    - route:
+      route:
         - destination:
             host: frontend
             port:
