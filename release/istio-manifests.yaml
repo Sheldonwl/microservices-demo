@@ -90,9 +90,13 @@ spec:
   hosts:
   - "frontend.onlineboutique.svc.cluster.local"
   http:
-  - route:
-    - destination:
-        host: frontend
-        port:
-          number: 80
+  - name: "onlineboutique"
+    match:
+    - uri:
+      prefix: /onlineboutique
+    route:
+      - destination:
+          host: frontend
+          port:
+            number: 80
 # [END servicemesh_release_istio_manifests_microservices_demo]
